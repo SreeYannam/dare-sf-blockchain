@@ -1,0 +1,210 @@
+<head>
+  <title>dAppDemo</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+	<h1 class="jumbotron text-center"
+		style="background-color: #cdcdcd; font-size: 25px; font-weight: bold;margin-top:0;">WELCOME
+		TO BLOCK CHAIN - BASED SCIENCE GATEWAY</h1>
+	<p class="text-center" style="height: 100px;margin-top: 3%;">{{> hello}}</p>
+	<p class="text-center">{{> info}}</p>
+</body>
+
+
+<template name="hello">
+<div class="col-md-12" style="width: 76%;
+    height: 180px;
+    background-color: #ebebe0;
+    margin-left: 12%;
+    border: none;
+    margin-top: 2%;	
+	padding:0;">
+<div class="col-md-12" style="background-color:#FFFFC6;width:100%;padding:0;"><span class="glyphicon glyphicon-info-sign" style="font-size:20px;"></span><span style="font-family: calibri;
+    font-size: 30px;">Notifications</span></div></div>
+	<div class="col-md-12" style="margin-top:2%;">
+	<ul class="row" style="list-style-type: none; margin-top: 3%;">
+	<li class="col-md-4"
+		style="margin-left: 11%; width: 25%; height: 180px; padding: 10px 50px 10px 50px; display: table;">
+		<button	id="button"	data-toggle="modal" data-target="#myModalHorizontal1" style="width: 100%;
+    font-weight: bold;
+    vertical-align: middle;
+    display: table-cell;
+    background-color: #ffffb3;
+    color: black;
+    height: 160px;outline:none;border:none;"><span
+			class="glyphicon glyphicon-upload"
+			style="font-size: -webkit-xxx-large; width: 100%;"></span>Submit A
+			Job
+	</button>
+	</li>
+	<li class="col-md-4"
+		style="width: 25%; height: 180px; padding: 10px 50px 10px 50px; display: table;"><button id="buttonMonitor"	data-toggle="modal" data-target="#myModalHorizontal2" style="width: 100%;
+    font-weight: bold;
+    vertical-align: middle;
+    display: table-cell;
+    background-color: #ffffb3;
+    color: black;
+    height: 160px;outline:none;border:none; "><span
+			class="glyphicon glyphicon-question-sign"
+			style="font-size: -webkit-xxx-large; width: 100%;"></span>Check Job</button></li>
+	<li class="col-md-4"
+		style="width: 25%; height: 180px; padding: 10px 50px 10px 50px; display: table;">
+		<button	id="buttonResult" data-toggle="modal" data-target="#myModalHorizontal3" style="width: 100%;
+    font-weight: bold;
+    vertical-align: middle;
+    display: table-cell;
+    background-color: #ffffb3;
+    color: black;
+    height: 160px;outline:none;border:none; "><span
+			class="glyphicon glyphicon-list-alt"
+			style="font-size: -webkit-xxx-large; width: 100%;"></span>Output/Log</button>
+	</li>
+</ul>
+</div>
+<div class="modal fade" id="myModalHorizontal1" tabindex="-1" role="dialog" 
+     aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog" style="margin-top:13%;">
+        <div class="modal-content">
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <button type="button" class="close" 
+                   data-dismiss="modal">
+                       <span aria-hidden="true">&times;</span>
+                       <span class="sr-only">Close</span>
+                </button>
+                <h4 class="modal-title" id="myModalLabel" style="font-family:calibri;font-weight:bold;">
+                    Find Your Contract Here!!!
+                </h4>
+            </div>
+            
+            <!-- Modal Body -->
+            <div class="modal-body">              
+                <form class="form-horizontal" role="form">
+                  <div class="form-group">
+                    <label  class="col-sm-3 control-label"
+                              style="text-align:center;margin-top: 3%;font-family:calibri !important;">Contract Command</label>
+                    <div class="col-sm-9">
+                     <p style="border:1px solid black;width:100%;height:50px;margin-top: 3%;overflow:auto;background-color:#ffffb3;font-weight:bold;">{{counter1}}{{TemplateVar.get"counter1"}} </p>
+                    </div>
+                  </div>
+               
+                </form>  
+            </div>            
+            <!-- Modal Footer -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger"
+                        data-dismiss="modal">
+                            Close
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="modal fade" id="myModalHorizontal2" tabindex="-1" role="dialog" 
+     aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog" style="margin-top:13%;">
+        <div class="modal-content">
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <button type="button" class="close" 
+                   data-dismiss="modal">
+                       <span aria-hidden="true">&times;</span>
+                       <span class="sr-only">Close</span>
+                </button>
+                <h4 class="modal-title" id="myModalLabel" style="font-family:calibri;font-weight:bold;">
+                    Find Your Contract Here!!!
+                </h4>
+            </div>
+            
+            <!-- Modal Body -->
+            <div class="modal-body">              
+                <form class="form-horizontal" role="form">
+                  <div class="form-group">
+                    <label  class="col-sm-3 control-label"
+                            style="text-align:center;margin-top: 3%;font-family:calibri !important;" >Contract Command</label>
+                    <div class="col-sm-9">
+                       <p style="border:1px solid black;width:100%;margin-top: 3%;height:50px;overflow:auto;background-color:#ffffb3;font-weight:bold;">{{counter2}}{{TemplateVar.get"counter2"}} </p>
+                    </div>
+                  </div>
+               
+                </form>  
+            </div>            
+            <!-- Modal Footer -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger"
+                        data-dismiss="modal">
+                            Close
+                </button>
+               
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="myModalHorizontal3" tabindex="-1" role="dialog" 
+     aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog" style="margin-top:13%;">
+        <div class="modal-content">
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <button type="button" class="close" 
+                   data-dismiss="modal">
+                       <span aria-hidden="true">&times;</span>
+                       <span class="sr-only">Close</span>
+                </button>
+                <h4 class="modal-title" id="myModalLabel" style="font-family:calibri;font-weight:bold;">
+                     Find Your Contract Here!!!
+                </h4>
+            </div>
+            
+            <!-- Modal Body -->
+            <div class="modal-body">              
+                <form class="form-horizontal" role="form">
+                  <div class="form-group">
+                    <label  class="col-sm-3 control-label" style="text-align:center;margin-top: 3%;font-family:calibri!important;" >Contract Command</label>
+                    <div class="col-sm-9">
+                        <p style="border:1px solid black;width:100%;height:50px;margin-top: 3%;overflow:auto;background-color:#ffffb3;font-weight:bold;">{{counter3}}{{TemplateVar.get"counter3"}} </p>
+                    </div>
+                  </div>
+               
+                </form>  
+            </div>            
+            <!-- Modal Footer -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger"
+                        data-dismiss="modal">
+                            Close
+                </button>
+               
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+	
+	
+	
+	
+
+</template>
+
+<template name="info">
+
+
+</template>
